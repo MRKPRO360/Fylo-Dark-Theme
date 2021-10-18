@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	box-sizing: border-box;
+	font-size: 1.4rem;
+	background-color: $clr-dark-bg-primary;
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	color: $clr-white;
+	line-height: 1.6;
+	overflow-x: hidden;
+}

@@ -1,0 +1,98 @@
+.section-newsletter {
+	padding: 0 2rem;
+	@include breakpoint-up(port) {
+		padding: 0 15rem;
+	}
+
+	@include breakpoint-up(large) {
+		transform: translateY(-65%);
+	}
+
+	@include breakpoint-up(xlarge) {
+		padding: 0 28.8rem;
+	}
+}
+
+.newsletter {
+	background-color: $clr-dark-bg-secondary;
+	padding: 4.5rem 3rem 4rem;
+	text-align: center;
+	border-radius: 0.8rem;
+
+	@include breakpoint-up(xlarge) {
+		padding: 5rem 7rem 4rem;
+	}
+
+	&__text {
+		margin-top: 2.4rem;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+
+		@include breakpoint-up(port) {
+			margin-top: 4rem;
+			flex-direction: row;
+		}
+	}
+
+	&__form-wrapper {
+		position: relative;
+		@include breakpoint-up(port) {
+			flex: 1;
+			margin-right: 3rem;
+		}
+
+		@include breakpoint-up(large) {
+		}
+	}
+
+	&__form-input {
+		width: 100%;
+		display: inline-block;
+		border: none;
+		border-radius: 0.5rem;
+		margin: 3.5rem 0 2.5rem;
+
+		padding: 17px 30px;
+		border-radius: 25px;
+
+		&:focus {
+			outline: none;
+		}
+
+		&::-webkit-input-placeholder {
+			color: #aaa;
+		}
+
+		@include breakpoint-up(port) {
+			margin: 0 3rem 0 0;
+			display: block;
+		}
+	}
+
+	&__form-input:focus:invalid + &__form-label {
+		opacity: 1;
+	}
+
+	&__form-label {
+		position: absolute;
+		bottom: 0;
+		left: 3rem;
+		color: $clr-accent-red;
+		transition: 0.3s;
+		opacity: 0;
+
+		@include breakpoint-up(port) {
+			bottom: -3rem;
+			left: 3rem;
+		}
+	}
+
+	&__btn {
+		border: none;
+		padding: 17px 15px;
+		border-radius: 25px;
+	}
+}

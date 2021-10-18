@@ -1,0 +1,43 @@
+.section__features {
+	padding: 13rem 6.5rem 16rem;
+
+	@include breakpoint-up(port) {
+		display: grid;
+		gap: 6rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 25rem);
+		// align-items: end;
+		padding: 0 15rem 12rem;
+	}
+	@include breakpoint-up(xlarge) {
+		padding: 1rem 25rem 16rem;
+	}
+}
+
+.feature {
+	text-align: center;
+	&:not(:last-child) {
+		padding-bottom: 8.5rem;
+	}
+
+	@include breakpoint-up(port) {
+		&:not(:last-child) {
+			padding-bottom: 0;
+		}
+	}
+
+	&__img {
+		margin-bottom: 3.5rem;
+		height: 90px;
+	}
+
+	&__text {
+		margin-top: 1.5rem;
+		@include breakpoint-up(port) {
+			padding: 1rem;
+		}
+		@include breakpoint-down(port) {
+			padding: 0 1rem;
+		}
+	}
+}

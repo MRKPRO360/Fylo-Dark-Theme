@@ -1,0 +1,58 @@
+.heading-1 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: $clr-white;
+
+	@include breakpoint-up(large) {
+		font-size: 4rem;
+	}
+}
+
+.heading-2 {
+	font-size: 1.8rem;
+
+	@include breakpoint-up(medium) {
+		font-size: 4rem;
+	}
+}
+
+.heading-3 {
+	font-size: 2rem;
+	@include breakpoint-up(medium) {
+		font-size: 3rem;
+	}
+}
+.heading-4 {
+	font-size: 2rem;
+}
+
+.btn {
+	&,
+	&:link,
+	&:visited {
+		display: inline-block;
+		background-image: linear-gradient(
+			to right,
+			rgba($clr-accent-cyan-1, 0.95),
+			rgba($clr-accent-cyan-2, 0.7)
+		);
+		color: $clr-white;
+		font-weight: 700;
+		transition: 0.3s;
+		text-decoration: none;
+		padding: 1.3rem 8rem;
+		border-radius: 3rem;
+		transition: 0.3s;
+		opacity: 0.8;
+	}
+
+	&:hover,
+	&:active {
+		background-image: linear-gradient(
+			to right,
+			rgba($clr-accent-cyan-1, 1),
+			rgba($clr-accent-cyan-2, 1)
+		);
+		opacity: 1;
+	}
+}

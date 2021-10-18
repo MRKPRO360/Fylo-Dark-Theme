@@ -1,0 +1,80 @@
+.section-info {
+	padding: 0 2rem;
+}
+
+.info {
+	@include breakpoint-up(large) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 6rem;
+	}
+
+	&__img {
+		width: 90%;
+		transform: translateX(6.5%);
+		margin-bottom: 5.2rem;
+
+		@include breakpoint-down(medium) {
+			width: 60%;
+			transform: translateX(35%);
+		}
+
+		@include breakpoint-up(large) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__description {
+		@include breakpoint-up(medium) {
+			text-align: center;
+			padding: 0 5rem;
+		}
+		@include breakpoint-up(xlarge) {
+			padding-right: 16.8rem;
+		}
+	}
+
+	&__text {
+		&:first-of-type {
+			margin: 2.5rem 0;
+
+			@include breakpoint-up(large) {
+				margin-bottom: 3.5rem;
+			}
+		}
+
+		&:last-of-type {
+			margin-bottom: 2.5rem;
+			@include breakpoint-up(large) {
+				margin-bottom: 3.5rem;
+			}
+		}
+	}
+
+	&__btn {
+		&:link,
+		&:visited {
+			text-decoration: none;
+			display: inline-block;
+			color: $clr-accent-cyan-1;
+			padding-bottom: 0.3rem;
+			border-bottom: 1px solid currentColor;
+			transition: 0.3s;
+		}
+
+		&--arrow {
+			display: inline-block;
+			margin-left: 0.2rem;
+			transform: translateY(3px);
+		}
+
+		&:hover,
+		&:active {
+			color: $clr-white;
+
+			span .info-btn--arrow {
+				fill: #fff;
+			}
+		}
+	}
+}
